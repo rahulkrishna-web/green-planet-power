@@ -14,3 +14,4 @@
   - Improved visual balance in Metrics and Milestone sections with vertical dividers. [Added: 2026-04-14T13:55:00]
   - Added a premium "Soft Aurora" animated background to the Hero section using Framer Motion. [Added: 2026-04-14T14:15:00]
   - Fixed a Vercel build/TypeScript error in Hero.tsx by casting the custom easing array as a constant. [Added: 2026-04-14T14:55:00]
+  - Reorganized Hero into a centered vertical stack: Sharp Morphing Blob on top, Centered Staggered Text below. [Added: 2026-04-14T15:05:00]

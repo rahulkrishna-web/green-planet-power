@@ -65,26 +65,29 @@ export function Hero() {
     <motion.section 
       animate={{ backgroundColor: ["#B9F2B9", "#D2F8D2", "#A6EAA6", "#B9F2B9"] }}
       transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
-      className="min-h-[100svh] w-full flex flex-col pb-16 md:pb-24 pt-32 px-6 relative overflow-hidden"
+      className="min-h-[100svh] w-full flex flex-col items-center justify-center py-20 px-6 relative overflow-hidden"
     >
-      {/* Blank space morphing blob filler */}
-      <div className="flex-1 flex flex-col items-center justify-center w-full z-0 px-4">
-        <BlobAnimation />
-      </div>
+      <div className="w-full max-w-7xl mx-auto z-10 flex flex-col items-center gap-12 md:gap-16">
+        {/* Sharp Morphing Blob on Top */}
+        <div className="relative z-0">
+          <BlobAnimation />
+        </div>
 
-      <div className="w-full max-w-7xl mx-auto z-10 text-left pt-12">
-        <motion.h1 
-          variants={container}
-          initial="hidden"
-          animate="visible"
-          className="text-4xl md:text-5xl lg:text-[4.5rem] xl:text-7xl font-bold text-[#2D3A2D] leading-[1.05] tracking-tight max-w-5xl"
-        >
-          {words.map((word, index) => (
-            <motion.span key={index} variants={child} className="inline-block mr-[0.25em] pb-1">
-              {word}
-            </motion.span>
-          ))}
-        </motion.h1>
+        {/* Centered Text below the blob */}
+        <div className="text-center">
+          <motion.h1 
+            variants={container}
+            initial="hidden"
+            animate="visible"
+            className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-[#2D3A2D] leading-[1.05] tracking-tight mx-auto max-w-5xl"
+          >
+            {words.map((word, index) => (
+              <motion.span key={index} variants={child} className="inline-block mr-[0.25em] pb-1">
+                {word}
+              </motion.span>
+            ))}
+          </motion.h1>
+        </div>
       </div>
     </motion.section>
   );
