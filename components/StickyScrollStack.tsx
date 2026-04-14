@@ -56,37 +56,37 @@ export function StickyScrollStack() {
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end end"] });
   const p = useSpring(scrollYProgress, { stiffness: 80, damping: 35 });
 
-  // Animation values - more conservative to keep stack on screen
-  const topY      = useTransform(p, [0.25, 0.55], [0, -80]);
-  const foundFill = useTransform(p, [0.25, 0.55], ["#E2E8F0", "#B9F2B9"]);
-  const topFill   = useTransform(p, [0.55, 0.85], ["#2D3A2D", "#B9F2B9"]);
+  // Animation values - faster triggers for 300vh track
+  const topY      = useTransform(p, [0.1, 0.4], [0, -80]);
+  const foundFill = useTransform(p, [0.1, 0.4], ["#E2E8F0", "#B9F2B9"]);
+  const topFill   = useTransform(p, [0.4, 0.7], ["#2D3A2D", "#B9F2B9"]);
   
   // High contrast label colors
   const foundationLabelColor = "#2D3A2D";
-  const topLabelColor = useTransform(p, [0.55, 0.85], ["#FFFFFF", "#2D3A2D"]);
+  const topLabelColor = useTransform(p, [0.4, 0.7], ["#FFFFFF", "#2D3A2D"]);
 
   // Frame animation
-  const frameColor = useTransform(p, [0.2, 0.4], ["rgba(45, 58, 45, 0.15)", "#34D399"]);
+  const frameColor = useTransform(p, [0.05, 0.2], ["rgba(45, 58, 45, 0.15)", "#34D399"]);
 
-  const leftBracket = useTransform(p, [0.25, 0.55], [
+  const leftBracket = useTransform(p, [0.1, 0.4], [
     `M 100,520 L 100,410 L 125,399`,
     `M 100,520 L 100,160 L 125,149`
   ]);
 
-  const rightBracket = useTransform(p, [0.25, 0.55], [
+  const rightBracket = useTransform(p, [0.1, 0.4], [
     `M 480,520 L 480,410 L 455,399`,
     `M 480,520 L 480,160 L 455,149`
   ]);
 
-  const op0 = useTransform(p, [0,    0.02,  0.28, 0.30], [0, 1, 1, 0]);
-  const op1 = useTransform(p, [0.32, 0.34,  0.57, 0.59], [0, 1, 1, 0]);
-  const op2 = useTransform(p, [0.61, 0.63,  0.88, 0.90], [0, 1, 1, 0]);
+  const op0 = useTransform(p, [0,    0.05, 0.30, 0.33], [0, 1, 1, 0]);
+  const op1 = useTransform(p, [0.35, 0.40, 0.63, 0.66], [0, 1, 1, 0]);
+  const op2 = useTransform(p, [0.68, 0.73, 0.95, 0.98], [0, 1, 1, 0]);
   const ops = [op0, op1, op2];
 
-  const wipe = useTransform(p, [0.88, 1.0], [0, 1]);
+  const wipe = useTransform(p, [0.95, 1.0], [0, 1]);
 
   return (
-    <section ref={ref} className="relative bg-off-white" style={{ height: "450vh" }}>
+    <section ref={ref} className="relative bg-off-white" style={{ height: "300vh" }}>
       <div className="sticky top-0 h-screen flex flex-col md:flex-row overflow-hidden">
 
         {/* LEFT: milestone text */}

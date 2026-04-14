@@ -65,7 +65,7 @@ export function Hero() {
     <motion.section 
       animate={{ backgroundColor: ["#B9F2B9", "#D2F8D2", "#A6EAA6", "#B9F2B9"] }}
       transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
-      className="min-h-[100svh] w-full flex flex-col items-center justify-center py-20 px-6 relative overflow-hidden"
+      className="min-h-[85vh] w-full flex flex-col items-center justify-center py-16 px-6 relative overflow-hidden"
     >
       <div className="w-full max-w-7xl mx-auto z-10 flex flex-col items-center gap-12 md:gap-16">
         {/* Sharp Morphing Blob on Top */}
