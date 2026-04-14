@@ -57,8 +57,8 @@ export function StickyScrollStack() {
   const p = useSpring(scrollYProgress, { stiffness: 80, damping: 35 });
 
   // Animation values - faster triggers for 300vh track
-  const topY      = useTransform(p, [0.1, 0.4], [0, -80]);
-  const foundFill = useTransform(p, [0.1, 0.4], ["#E2E8F0", "#B9F2B9"]);
+  const topY      = useTransform(p, [0, 0.4], [0, -80]);
+  const foundFill = useTransform(p, [0, 0.4], ["#B9F2B9", "#B9F2B9"]); // Start with foundation color
   const topFill   = useTransform(p, [0.4, 0.7], ["#2D3A2D", "#B9F2B9"]);
   
   // High contrast label colors
@@ -66,19 +66,19 @@ export function StickyScrollStack() {
   const topLabelColor = useTransform(p, [0.4, 0.7], ["#FFFFFF", "#2D3A2D"]);
 
   // Frame animation
-  const frameColor = useTransform(p, [0.05, 0.2], ["rgba(45, 58, 45, 0.15)", "#34D399"]);
+  const frameColor = useTransform(p, [0, 0.2], ["#34D399", "#34D399"]); // Active immediately
 
-  const leftBracket = useTransform(p, [0.1, 0.4], [
+  const leftBracket = useTransform(p, [0, 0.4], [
     `M 100,520 L 100,410 L 125,399`,
     `M 100,520 L 100,160 L 125,149`
   ]);
 
-  const rightBracket = useTransform(p, [0.1, 0.4], [
+  const rightBracket = useTransform(p, [0, 0.4], [
     `M 480,520 L 480,410 L 455,399`,
     `M 480,520 L 480,160 L 455,149`
   ]);
 
-  const op0 = useTransform(p, [0,    0.05, 0.30, 0.33], [0, 1, 1, 0]);
+  const op0 = useTransform(p, [0, 0, 0.30, 0.33], [1, 1, 1, 0]);
   const op1 = useTransform(p, [0.35, 0.40, 0.63, 0.66], [0, 1, 1, 0]);
   const op2 = useTransform(p, [0.68, 0.73, 0.95, 0.98], [0, 1, 1, 0]);
   const ops = [op0, op1, op2];
