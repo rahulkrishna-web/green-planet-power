@@ -40,7 +40,7 @@ function BlobAnimation() {
 }
 
 export function Hero() {
-  const text = "GPP enables the next era of AI with reliable, economically optimized, and low-carbon power and infrastructure solutions.";
+  const text = "GPP enables the next era of AI with reliable, economically optimized, and low-carbon power infrastructure solutions.";
   const words = text.split(" ");
 
   const container = {
