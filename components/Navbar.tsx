@@ -12,7 +12,11 @@ const navLinks = [
   { name: "Blog", href: "/blog" },
 ];
 
-export function Navbar() {
+interface NavbarProps {
+  onContactClick?: () => void;
+}
+
+export function Navbar({ onContactClick }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -42,7 +46,10 @@ export function Navbar() {
           >
             Portfolio
           </Link>
-          <button className="bg-brand-dark text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-brand-dark/90 transition-colors">
+          <button 
+            onClick={onContactClick}
+            className="bg-brand-dark text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-brand-dark/90 transition-colors cursor-pointer"
+          >
             Contact
           </button>
         </div>

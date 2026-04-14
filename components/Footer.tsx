@@ -29,7 +29,11 @@ const footerLinks = [
   },
 ];
 
-export function Footer() {
+interface FooterProps {
+  onContactClick?: () => void;
+}
+
+export function Footer({ onContactClick }: FooterProps) {
   return (
     <footer className="bg-brand-green px-6 py-16 md:py-24 font-sans border-t border-brand-dark/5">
       <div className="max-w-7xl mx-auto">
@@ -43,16 +47,27 @@ export function Footer() {
             </p>
           </div>
           
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-6 md:max-w-xs">
             <h4 className="font-bold text-brand-dark uppercase tracking-wider text-xs">
-              Connect
+              Contact Us
             </h4>
-            <div className="flex gap-6">
-              <Link href="#" className="text-brand-dark/80 hover:text-brand-dark transition-colors font-medium">LinkedIn</Link>
-              <Link href="#" className="text-brand-dark/80 hover:text-brand-dark transition-colors font-medium">Twitter</Link>
-              <Link href="#" className="text-brand-dark/80 hover:text-brand-dark transition-colors font-medium">Instagram</Link>
+            <div className="flex flex-col gap-4 text-brand-dark/70 text-sm leading-relaxed font-medium">
+              <p>
+                <span className="font-bold text-brand-dark block mb-1">Green Planet Power</span>
+                Unit of Abound Land LLP <br />
+                Chennai, Tamil Nadu
+              </p>
+              <p>
+                <span className="font-bold text-brand-dark">Email:</span> <br />
+                <a href="mailto:info@greenplanetpower.co.in" className="hover:text-brand-dark transition-colors border-b border-brand-dark/20 pb-0.5">
+                  info@greenplanetpower.co.in
+                </a>
+              </p>
             </div>
-            <button className="mt-4 bg-brand-dark text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-brand-dark/90 transition-all self-start">
+            <button 
+              onClick={onContactClick}
+              className="mt-2 bg-brand-dark text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-brand-dark/90 transition-all self-start shadow-sm cursor-pointer"
+            >
               Get in Touch
             </button>
           </div>

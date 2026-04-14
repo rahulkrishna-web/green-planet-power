@@ -15,3 +15,5 @@
   - Added a premium "Soft Aurora" animated background to the Hero section using Framer Motion. [Added: 2026-04-14T14:15:00]
   - Fixed a Vercel build/TypeScript error in Hero.tsx by casting the custom easing array as a constant. [Added: 2026-04-14T14:55:00]
   - Reorganized Hero into a centered vertical stack: Sharp Morphing Blob on top, Centered Staggered Text below. [Added: 2026-04-14T15:05:00]
+  - Integrated official contact details into Footer: Unit of Abound Land LLP, Chennai, and email link. [Added: 2026-04-14T15:52:00]
+  - Implemented glassmorphic contact popup with Google Sheets integration, metadata logging, and live Web App connection. [Added: 2026-04-14T16:03:00]
