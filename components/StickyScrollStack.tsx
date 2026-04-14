@@ -6,7 +6,7 @@ import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 const MILESTONES = [
   {
     counter: "01 / 03",
-    text: "Benchmarking the  future  of the AI infrastructure stack—the strategic land, innovative steel, and power—on which AI is built.",
+    text: "Benchmarking the  future  of the AI infrastructure stack - the strategic land, innovative steel, and power - on which AI is built.",
   },
   {
     counter: "02 / 03",
