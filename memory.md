@@ -17,3 +17,7 @@
   - Reorganized Hero into a centered vertical stack: Sharp Morphing Blob on top, Centered Staggered Text below. [Added: 2026-04-14T15:05:00]
   - Integrated official contact details into Footer: Unit of Abound Land LLP, Chennai, and email link. [Added: 2026-04-14T15:52:00]
   - Implemented glassmorphic contact popup with Google Sheets integration, metadata logging, and live Web App connection. [Added: 2026-04-14T16:03:00]
+  - Integrated Lucide icons into Metrics section and refined alignment with vertical accents. [Added: 2026-04-14T16:32:00]
+  - Optimized scroll-based transitions: Removed Hero/AI Stack gap and reduced track heights. [Added: 2026-04-14T16:35:00]
+  - Created high-fidelity Privacy Policy page at `/privacy` with rich typography and structured data tables. [Added: 2026-04-14T16:55:00]
+  - Upgraded Footer to render grouped navigation links (Company, Solutions, Legal). [Added: 2026-04-14T16:57:00]

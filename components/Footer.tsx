@@ -37,14 +37,36 @@ export function Footer({ onContactClick }: FooterProps) {
   return (
     <footer className="bg-brand-green px-6 py-16 md:py-24 font-sans border-t border-brand-dark/5">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-16">
-          <div className="max-w-md">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+          <div className="md:col-span-1">
             <Link href="/" className="text-3xl font-bold tracking-tighter text-brand-dark">
               GPP
             </Link>
-            <p className="mt-6 text-brand-dark/70 leading-relaxed">
+            <p className="mt-6 text-brand-dark/70 leading-relaxed text-sm">
               GPP enables the next era of AI with reliable, economically optimized, and low-carbon power and infrastructure solutions.
             </p>
+          </div>
+
+          <div className="md:col-span-2 grid grid-cols-2 md:grid-cols-3 gap-8">
+            {footerLinks.map((group) => (
+              <div key={group.title} className="flex flex-col gap-4">
+                <h4 className="font-bold text-brand-dark uppercase tracking-wider text-[10px]">
+                  {group.title}
+                </h4>
+                <ul className="flex flex-col gap-2">
+                  {group.links.map((link) => (
+                    <li key={link.name}>
+                      <Link 
+                        href={link.href} 
+                        className="text-brand-dark/60 hover:text-brand-dark transition-colors text-sm font-medium"
+                      >
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
           
           <div className="flex flex-col gap-6 md:max-w-xs">
