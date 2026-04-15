@@ -136,34 +136,7 @@ export default function PrivacyPage() {
             </p>
           </section>
 
-          <section className="bg-brand-dark text-white p-12 rounded-[3.5rem] mt-24 shadow-2xl overflow-hidden relative">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl -mr-32 -mt-32" />
-            <div className="relative z-10">
-              <h2 className="text-4xl font-bold mb-8 text-emerald-400 tracking-tight">Illinois Biometric Data Privacy Policy</h2>
-              <div className="space-y-8 text-white/80 leading-relaxed">
-                <p className="text-lg">
-                  We maintain a security system to regulate access to our secure locations, such as our THIRD PARTY Data Centers in Illinois.
-                </p>
-                <div className="grid md:grid-cols-2 gap-12 mt-12">
-                  <div>
-                    <h4 className="font-bold text-emerald-300 uppercase tracking-widest text-[10px] mb-4">Verification Tech</h4>
-                    <p className="text-sm">
-                      Our system utilizes hand/finger scanning devices. Data is immediately converted to an encrypted mathematical file (template). No handprints or fingerprints are retained after the template is created.
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-emerald-300 uppercase tracking-widest text-[10px] mb-4">Retention Rules</h4>
-                    <p className="text-sm">
-                      Templates are retained until access is removed, or one year following the last access. We permanently destroy templates upon expiration of these time periods.
-                    </p>
-                  </div>
-                </div>
-                <p className="text-sm bg-white/5 p-6 rounded-2xl border border-white/10 mt-8">
-                  We do not sell, lease, or profit from your templates. We safeguard this data using reasonable standards of care equally protective to our other sensitive Personal Data.
-                </p>
-              </div>
-            </div>
-          </section>
+          
 
           <section className="pt-24 border-t border-brand-dark/10">
             <div className="bg-brand-green/5 rounded-3xl p-10 text-center border border-brand-dark/5">
