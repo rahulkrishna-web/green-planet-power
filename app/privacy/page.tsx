@@ -6,15 +6,12 @@ export default function PrivacyPage() {
   return (
     <div className="bg-white min-h-screen font-sans">
       <Navbar />
-      
+
       <main className="max-w-4xl mx-auto px-6 py-24 md:py-32">
         <header className="mb-16 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-brand-dark tracking-tight mb-4">
             Privacy Statement
           </h1>
-          <p className="text-brand-dark/50 font-medium tracking-wide uppercase text-xs">
-            Effective date: 12th December 2025
-          </p>
         </header>
 
         <div className="prose prose-lg prose-emerald max-w-none text-brand-dark/80 leading-relaxed space-y-12">
@@ -50,7 +47,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-2xl font-bold text-brand-dark mt-16 mb-6">Personal Data We Collect</h2>
             <p className="mb-6">We may collect Personal Data from you, or about you, from a variety of sources. Some examples include:</p>
-            
+
             <div className="overflow-x-auto border border-brand-dark/10 rounded-3xl shadow-sm my-12 bg-white">
               <table className="w-full text-left text-sm min-w-[600px]">
                 <thead className="bg-brand-dark text-white font-bold tracking-wider uppercase text-[10px]">
@@ -109,7 +106,7 @@ export default function PrivacyPage() {
                 { title: "Legal & Safety", desc: "Internal auditing, fraud detection, and enabling compliance with regulatory and legal obligations." }
               ].map((item, i) => (
                 <li key={i} className="flex gap-4">
-                  <span className="flex-shrink-0 w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xs">{i+1}</span>
+                  <span className="flex-shrink-0 w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xs">{i + 1}</span>
                   <div>
                     <h4 className="font-bold text-brand-dark">{item.title}</h4>
                     <p className="text-brand-dark/70 text-sm mt-1">{item.desc}</p>
@@ -136,7 +133,7 @@ export default function PrivacyPage() {
             </p>
           </section>
 
-          
+
 
           <section className="pt-24 border-t border-brand-dark/10">
             <div className="bg-brand-green/5 rounded-3xl p-10 text-center border border-brand-dark/5">
